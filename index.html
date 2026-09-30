@@ -2,351 +2,550 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ARZON BOZOR | TOY QAZI</title>
+<title>ARZON BOZOR | TOY QAZI</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f3ea;
-            color: #2b2118;
-        }
+body{
+    font-family:Arial, sans-serif;
+    background:#f5efe5;
+    color:#2b1b12;
+}
 
-        header {
-            background: linear-gradient(135deg, #3b1f0f, #8b4a20);
-            color: white;
-            text-align: center;
-            padding: 25px 15px 35px;
-        }
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#35180b,#8b451f,#c8792d);
+    color:white;
+    text-align:center;
+    padding:25px 15px 35px;
+}
 
-        .logo {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
-            background: white;
-            border-radius: 50%;
-            padding: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.35);
-            margin-bottom: 15px;
-        }
+.logo{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:7px;
+    box-shadow:0 6px 25px rgba(0,0,0,.4);
+    margin-bottom:15px;
+}
 
-        header h1 {
-            font-size: 35px;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
+header h1{
+    font-size:38px;
+    letter-spacing:3px;
+    margin-bottom:8px;
+}
 
-        header p {
-            font-size: 17px;
-        }
+header p{
+    font-size:18px;
+}
 
-        nav {
-            background: #24150c;
-            padding: 14px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+/* MENU */
+nav{
+    background:#24130b;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 12px;
+}
 
-        nav a:hover {
-            color: #ffd27d;
-        }
+nav a:hover{
+    color:#ffc46b;
+}
 
-        .hero {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 40px 20px;
-            text-align: center;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
+/* HERO */
+.hero{
+    max-width:1100px;
+    margin:30px auto;
+    padding:45px 20px;
+    background:white;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 6px 25px rgba(0,0,0,.12);
+}
 
-        .horse {
-            font-size: 65px;
-            margin-bottom: 15px;
-        }
+.horse{
+    font-size:75px;
+    margin-bottom:10px;
+}
 
-        .hero h2 {
-            font-size: 30px;
-            color: #6b3215;
-            margin-bottom: 12px;
-        }
+.hero h2{
+    color:#71340f;
+    font-size:30px;
+    margin-bottom:15px;
+}
 
-        .hero p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+}
 
-        .section {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+/* SECTION */
+.section{
+    max-width:1100px;
+    margin:45px auto;
+    padding:0 20px;
+}
 
-        .section h2 {
-            text-align: center;
-            color: #5b2c12;
-            font-size: 30px;
-            margin-bottom: 25px;
-        }
+.section-title{
+    text-align:center;
+    font-size:32px;
+    color:#602d11;
+    margin-bottom:28px;
+}
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-        }
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
 
-        .product {
-            background: white;
-            border-radius: 18px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-            border: 2px solid transparent;
-        }
+.product{
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    transition:.3s;
+    overflow:hidden;
+}
 
-        .product:hover {
-            transform: translateY(-6px);
-            border-color: #a85b27;
-        }
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
 
-        .product-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+.product-image{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:15px;
+    background:#eee;
+}
 
-        .product h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #572b14;
-        }
+.product h3{
+    color:#632e12;
+    font-size:23px;
+    margin:15px 0 8px;
+}
 
-        .product p {
-            color: #666;
-            margin-bottom: 15px;
-        }
+.product p{
+    color:#666;
+    margin-bottom:12px;
+}
 
-        .price {
-            display: block;
-            color: #9b3f12;
-            font-size: 20px;
-            font-weight: bold;
-        }
+.price{
+    display:block;
+    color:#a6420c;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
 
-        .info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.order-btn{
+    display:inline-block;
+    background:#9b4717;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:25px;
+    font-weight:bold;
+}
 
-        .info-card {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
+.order-btn:hover{
+    background:#d07028;
+}
 
-        .info-card .icon {
-            font-size: 40px;
-            margin-bottom: 12px;
-        }
+/* INFO */
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
 
-        .info-card h3 {
-            color: #673316;
-            margin-bottom: 8px;
-        }
+.info-card{
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
 
-        .contact {
-            text-align: center;
-            background: #3b1f0f;
-            color: white;
-            padding: 40px 20px;
-            margin-top: 50px;
-        }
+.info-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-        .contact h2 {
-            margin-bottom: 20px;
-        }
+.info-card h3{
+    color:#642e12;
+    margin-bottom:10px;
+}
 
-        .phone {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 25px;
-            background: #d88932;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 20px;
-            font-weight: bold;
-        }
+/* CONTACT */
+.contact{
+    background:linear-gradient(135deg,#35180b,#753614);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    margin-top:50px;
+}
 
-        .phone:hover {
-            background: #f0a44b;
-        }
+.contact h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
 
-        footer {
-            background: #24150c;
-            color: #ddd;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
+.contact p{
+    margin:10px;
+    font-size:17px;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 27px;
-            }
+.phone{
+    display:inline-block;
+    margin-top:20px;
+    background:#e18b32;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:21px;
+    font-weight:bold;
+}
 
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
+.phone:hover{
+    background:#f2ad58;
+}
 
-            nav a {
-                margin: 0 5px;
-                font-size: 14px;
-            }
+/* FOOTER */
+footer{
+    background:#1d1009;
+    color:#ddd;
+    text-align:center;
+    padding:22px;
+}
 
-            .hero h2 {
-                font-size: 24px;
-            }
-        }
-    </style>
+/* MOBILE */
+@media(max-width:600px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    .logo{
+        width:120px;
+        height:120px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+        font-size:14px;
+    }
+
+    .hero{
+        margin:20px 10px;
+        padding:30px 15px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .section{
+        padding:0 12px;
+    }
+
+    .product-image{
+        height:190px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <img src="logo.png" alt="Arzon Bozor Toy Qazi logosi" class="logo">
+<!-- HEADER -->
+<header>
 
-        <h1>ARZON BOZOR</h1>
-        <p>TOY QAZI — ishonchli manzil!</p>
-    </header>
+    <img src="logo.png"
+         alt="Arzon Bozor Toy Qazi"
+         class="logo">
 
-    <nav>
-        <a href="#bosh">Bosh sahifa</a>
-        <a href="#mahsulotlar">Mahsulotlar</a>
-        <a href="#bizhaqimizda">Biz haqimizda</a>
-        <a href="#aloqa">Aloqa</a>
-    </nav>
+    <h1>ARZON BOZOR</h1>
 
-    <section class="hero" id="bosh">
-        <div class="horse">🐎</div>
+    <p>TOY QAZI — ISHONCHLI MANZIL!</p>
 
-        <h2>Sifatni va halollikni yaxshi ko‘radiganlar uchun!</h2>
+</header>
 
-        <p>
-            Arzon Bozor — sifatli toy qazi, kolbasa va boshqa
-            mazali mahsulotlarni taklif qiluvchi ishonchli manzil.
-        </p>
-    </section>
 
-    <section class="section" id="mahsulotlar">
+<!-- MENU -->
+<nav>
 
-        <h2>🛒 Bizning mahsulotlar</h2>
+    <a href="#bosh">Bosh sahifa</a>
 
-        <div class="products">
+    <a href="#mahsulotlar">Mahsulotlar</a>
 
-            <div class="product">
-                <div class="product-icon">🥩</div>
-                <h3>Qazi</h3>
-                <p>Yangi va sifatli qazi</p>
-                <span class="price">Narxi: Kelishiladi</span>
-            </div>
+    <a href="#biz">Biz haqimizda</a>
 
-            <div class="product">
-                <div class="product-icon">🌭</div>
-                <h3>Kolbasa</h3>
-                <p>Turli xil mazali kolbasalar</p>
-                <span class="price">Narxi: Kelishiladi</span>
-            </div>
+    <a href="#aloqa">Aloqa</a>
 
-            <div class="product">
-                <div class="product-icon">🥩</div>
-                <h3>Go‘sht mahsulotlari</h3>
-                <p>Sifatli va yangi mahsulotlar</p>
-                <span class="price">Narxi: Kelishiladi</span>
-            </div>
+</nav>
 
-            <div class="product">
-                <div class="product-icon">🛍️</div>
-                <h3>Boshqa mahsulotlar</h3>
-                <p>Do‘konimizdagi boshqa mahsulotlar</p>
-                <span class="price">Narxi: Kelishiladi</span>
-            </div>
 
-        </div>
-    </section>
+<!-- BOSH SAHIFA -->
+<section class="hero" id="bosh">
 
-    <section class="section" id="bizhaqimizda">
+    <div class="horse">🐎</div>
 
-        <h2>⭐ Biz haqimizda</h2>
+    <h2>
+        Sifatni va halollikni yaxshi ko‘radiganlar uchun!
+    </h2>
 
-        <div class="info">
+    <p>
+        Arzon Bozor — sifatli toy qazi, kolbasa,
+        go‘sht mahsulotlari va boshqa mazali
+        mahsulotlarni taklif qiluvchi ishonchli manzil.
+    </p>
 
-            <div class="info-card">
-                <div class="icon">✅</div>
-                <h3>Sifat</h3>
-                <p>Sifatli mahsulotlarga e’tibor beramiz.</p>
-            </div>
+</section>
 
-            <div class="info-card">
-                <div class="icon">🤝</div>
-                <h3>Ishonch</h3>
-                <p>Mijozlarimizga halol va ishonchli xizmat.</p>
-            </div>
 
-            <div class="info-card">
-                <div class="icon">🏪</div>
-                <h3>Do‘kon</h3>
-                <p>Kerakli mahsulotlarni bir joydan topishingiz mumkin.</p>
-            </div>
+<!-- MAHSULOTLAR -->
+<section class="section" id="mahsulotlar">
+
+    <h2 class="section-title">
+        🛒 Bizning mahsulotlar
+    </h2>
+
+
+    <div class="products">
+
+
+        <!-- QAZI -->
+        <div class="product">
+
+            <img
+                class="product-image"
+                src="data:image/svg+xml;utf8,
+                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
+                <rect width='100%25' height='100%25' fill='%23ead2b5'/>
+                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🥩</text>
+                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>QAZI</text>
+                </svg>"
+                alt="Qazi">
+
+            <h3>Qazi</h3>
+
+            <p>
+                Yangi va sifatli toy qazi
+            </p>
+
+            <span class="price">
+                Narxi: Kelishiladi
+            </span>
+
+            <a class="order-btn" href="tel:958497979">
+                Buyurtma berish
+            </a>
 
         </div>
-    </section>
 
-    <section class="contact" id="aloqa">
 
-        <h2>📞 Biz bilan bog‘laning</h2>
+        <!-- KOLBASA -->
+        <div class="product">
 
-        <p>Arzon Bozor — ishonchli manzil!</p>
+            <img
+                class="product-image"
+                src="data:image/svg+xml;utf8,
+                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
+                <rect width='100%25' height='100%25' fill='%23efd0c0'/>
+                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🌭</text>
+                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>KOLBASA</text>
+                </svg>"
+                alt="Kolbasa">
 
-        <p style="margin-top:10px;">
-            📍 Manzil: Shifobaxsh suvlar, 4
-        </p>
+            <h3>Kolbasa</h3>
 
-        <p style="margin-top:10px;">
-            ⏰ Ish vaqti: Har kuni
-        </p>
+            <p>
+                Turli xil mazali kolbasalar
+            </p>
 
-        <a class="phone" href="tel:958497979">
-            📞 95-849-79-79
-        </a>
+            <span class="price">
+                Narxi: Kelishiladi
+            </span>
 
-    </section>
+            <a class="order-btn" href="tel:958497979">
+                Buyurtma berish
+            </a>
 
-    <footer>
-        © 2026 ARZON BOZOR — TOY QAZI. Barcha huquqlar himoyalangan.
-    </footer>
+        </div>
+
+
+        <!-- GO'SHT -->
+        <div class="product">
+
+            <img
+                class="product-image"
+                src="data:image/svg+xml;utf8,
+                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
+                <rect width='100%25' height='100%25' fill='%23e8c5b5'/>
+                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🥩</text>
+                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>GO‘SHT</text>
+                </svg>"
+                alt="Go'sht">
+
+            <h3>Go‘sht</h3>
+
+            <p>
+                Sifatli va yangi go‘sht mahsulotlari
+            </p>
+
+            <span class="price">
+                Narxi: Kelishiladi
+            </span>
+
+            <a class="order-btn" href="tel:958497979">
+                Buyurtma berish
+            </a>
+
+        </div>
+
+
+        <!-- BOSHQA -->
+        <div class="product">
+
+            <img
+                class="product-image"
+                src="data:image/svg+xml;utf8,
+                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
+                <rect width='100%25' height='100%25' fill='%23eadfc9'/>
+                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🛍️</text>
+                <text x='50%25' y='75%25' text-anchor='middle' font-size='34' font-family='Arial' fill='%23632e12'>MAHSULOTLAR</text>
+                </svg>"
+                alt="Boshqa mahsulotlar">
+
+            <h3>Boshqa mahsulotlar</h3>
+
+            <p>
+                Do‘konimizdagi boshqa mahsulotlar
+            </p>
+
+            <span class="price">
+                Narxi: Kelishiladi
+            </span>
+
+            <a class="order-btn" href="tel:958497979">
+                Buyurtma berish
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BIZ HAQIMIZDA -->
+<section class="section" id="biz">
+
+    <h2 class="section-title">
+        ⭐ Biz haqimizda
+    </h2>
+
+
+    <div class="info">
+
+        <div class="info-card">
+
+            <div class="info-icon">✅</div>
+
+            <h3>Sifat</h3>
+
+            <p>
+                Sifatli mahsulotlarga e’tibor beramiz.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">🤝</div>
+
+            <h3>Ishonch</h3>
+
+            <p>
+                Mijozlarimizga halol va ishonchli xizmat.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">🏪</div>
+
+            <h3>Do‘kon</h3>
+
+            <p>
+                Kerakli mahsulotlarni bir joydan topishingiz mumkin.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ALOQA -->
+<section class="contact" id="aloqa">
+
+    <h2>📞 Biz bilan bog‘laning</h2>
+
+    <p>
+        Arzon Bozor — ishonchli manzil!
+    </p>
+
+    <p>
+        📍 Manzil: Shifobaxsh suvlar, 4
+    </p>
+
+    <p>
+        ⏰ Ish vaqti: Har kuni
+    </p>
+
+    <a class="phone" href="tel:958497979">
+        📞 95-849-79-79
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 ARZON BOZOR — TOY QAZI
+
+</footer>
 
 </body>
 </html>
