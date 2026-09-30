@@ -25,10 +25,10 @@
 
         /* HEADER */
         header {
-            background: linear-gradient(135deg, #8b0000, #c40000);
+            background: linear-gradient(135deg, #8b0000, #d40000);
             color: white;
             text-align: center;
-            padding: 35px 20px;
+            padding: 40px 20px;
         }
 
         header h1 {
@@ -69,6 +69,7 @@
             padding: 25px 15px;
         }
 
+        /* WELCOME */
         .welcome {
             background: white;
             padding: 30px;
@@ -125,9 +126,10 @@
 
         .filters button:hover {
             background: #c40000;
+            transform: scale(1.05);
         }
 
-        /* SECTION */
+        /* SECTIONS */
         section {
             margin-bottom: 50px;
         }
@@ -198,8 +200,9 @@
         }
 
         .contact p {
-            margin: 15px 0;
+            margin: 17px 0;
             font-size: 17px;
+            line-height: 1.5;
         }
 
         .contact a {
@@ -237,6 +240,19 @@
         .contact-button:hover {
             transform: scale(1.05);
             opacity: 0.9;
+        }
+
+        /* MAP */
+        .map {
+            margin-top: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
         }
 
         /* FOOTER */
@@ -313,6 +329,7 @@
         <p>Sifatli qazi va kalbasalar do‘koni</p>
     </header>
 
+
     <!-- NAVIGATION -->
     <nav>
         <a href="#home">Bosh sahifa</a>
@@ -321,46 +338,67 @@
         <a href="#aloqa">Aloqa</a>
     </nav>
 
+
     <main>
 
         <!-- HOME -->
         <div class="welcome" id="home">
+
             <h2>Do‘konimizga xush kelibsiz!</h2>
 
             <p>
-                ARZON BOZOR TOY QAZI — sifatli qazi va turli xil
-                kalbasalarni taklif qiluvchi do‘kon.
+                ❤️ Sifatni va halollikni yaxshi ko‘rganlar uchun!
             </p>
 
             <p style="margin-top: 10px;">
-                Mahsulotlarimizni quyidagi bo‘limlardan ko‘rishingiz mumkin.
+                ARZON BOZOR — ishonchli manzil!
             </p>
+
         </div>
+
 
         <!-- SEARCH -->
         <div class="search-box">
+
             <input
                 type="text"
                 id="searchInput"
                 placeholder="🔍 Mahsulot qidirish..."
                 onkeyup="searchProducts()"
             >
+
         </div>
+
 
         <!-- FILTER -->
         <div class="filters">
-            <button onclick="filterProducts('all')">Barchasi</button>
-            <button onclick="filterProducts('qazi')">Qazi</button>
-            <button onclick="filterProducts('kalbasa')">Kalbasa</button>
+
+            <button onclick="filterProducts('all')">
+                Barchasi
+            </button>
+
+            <button onclick="filterProducts('qazi')">
+                Qazi
+            </button>
+
+            <button onclick="filterProducts('kalbasa')">
+                Kalbasa
+            </button>
+
         </div>
 
+
         <!-- QAZI -->
-        <section id="qazi" class="category qazi">
+        <section id="qazi">
+
             <h2>🥩 Qazilar</h2>
 
             <div class="products">
 
+
+                <!-- QAZI 1 -->
                 <div class="product" data-category="qazi">
+
                     <img
                         src="qazi1.jpg.webp"
                         alt="Maxsus Qazi"
@@ -368,14 +406,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Maxsus Qazi</h3>
-                        <p>Turi: Maxsus qazi</p>
-                        <span class="price">150 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Maxsus qazi
+                        </p>
+
+                        <span class="price">
+                            150 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- QAZI 2 -->
                 <div class="product" data-category="qazi">
+
                     <img
                         src="qazi2.jpg.webp"
                         alt="To‘y Qazisi"
@@ -383,14 +432,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>To‘y Qazisi</h3>
-                        <p>Turi: To‘y uchun qazi</p>
-                        <span class="price">180 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: To‘y uchun qazi
+                        </p>
+
+                        <span class="price">
+                            180 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- QAZI 3 -->
                 <div class="product" data-category="qazi">
+
                     <img
                         src="qazi3.jpg.webp"
                         alt="Saralangan Qazi"
@@ -398,14 +458,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Saralangan Qazi</h3>
-                        <p>Turi: Saralangan</p>
-                        <span class="price">170 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Saralangan
+                        </p>
+
+                        <span class="price">
+                            170 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- QAZI 4 -->
                 <div class="product" data-category="qazi">
+
                     <img
                         src="qazi4.jpg.webp"
                         alt="Uy Qazisi"
@@ -413,14 +484,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Uy Qazisi</h3>
-                        <p>Turi: Uy sharoitida tayyorlangan</p>
-                        <span class="price">160 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Uy sharoitida tayyorlangan
+                        </p>
+
+                        <span class="price">
+                            160 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- QAZI 5 -->
                 <div class="product" data-category="qazi">
+
                     <img
                         src="qazi5.jpg.webp"
                         alt="Sifatli Qazi"
@@ -428,23 +510,37 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Sifatli Qazi</h3>
-                        <p>Turi: Saralangan go‘shtli qazi</p>
-                        <span class="price">175 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Saralangan go‘shtli qazi
+                        </p>
+
+                        <span class="price">
+                            175 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
             </div>
+
         </section>
 
 
         <!-- KALBASA -->
-        <section id="kalbasa" class="category kalbasa">
+        <section id="kalbasa">
+
             <h2>🌭 Kalbasalar</h2>
 
             <div class="products">
 
+
+                <!-- KALBASA 1 -->
                 <div class="product" data-category="kalbasa">
+
                     <img
                         src="kalbasa1.jpg.webp"
                         alt="Dudlangan Kalbasa"
@@ -452,14 +548,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Dudlangan Kalbasa</h3>
-                        <p>Turi: Dudlangan</p>
-                        <span class="price">85 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Dudlangan
+                        </p>
+
+                        <span class="price">
+                            85 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- KALBASA 2 -->
                 <div class="product" data-category="kalbasa">
+
                     <img
                         src="kalbasa2.jpg.webp"
                         alt="Maxsus Kalbasa"
@@ -467,14 +574,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Maxsus Kalbasa</h3>
-                        <p>Turi: Maxsus</p>
-                        <span class="price">95 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Maxsus
+                        </p>
+
+                        <span class="price">
+                            95 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- KALBASA 3 -->
                 <div class="product" data-category="kalbasa">
+
                     <img
                         src="kalbasa3.jpg.webp"
                         alt="Qaynatilgan Kalbasa"
@@ -482,14 +600,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Qaynatilgan Kalbasa</h3>
-                        <p>Turi: Qaynatilgan</p>
-                        <span class="price">75 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Qaynatilgan
+                        </p>
+
+                        <span class="price">
+                            75 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- KALBASA 4 -->
                 <div class="product" data-category="kalbasa">
+
                     <img
                         src="kalbasa4.jpg.jpg"
                         alt="Servelat Kalbasa"
@@ -497,14 +626,25 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Servelat Kalbasa</h3>
-                        <p>Turi: Servelat</p>
-                        <span class="price">100 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Servelat
+                        </p>
+
+                        <span class="price">
+                            100 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
 
+                <!-- KALBASA 5 -->
                 <div class="product" data-category="kalbasa">
+
                     <img
                         src="kalbasa5.jpg.webp"
                         alt="Doktorskaya Kalbasa"
@@ -512,48 +652,74 @@
                     >
 
                     <div class="product-info">
+
                         <h3>Doktorskaya Kalbasa</h3>
-                        <p>Turi: Qaynatilgan</p>
-                        <span class="price">90 000 so‘m / kg</span>
+
+                        <p>
+                            Turi: Qaynatilgan
+                        </p>
+
+                        <span class="price">
+                            90 000 so‘m / kg
+                        </span>
+
                     </div>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- CONTACT -->
+        <!-- ALOQA -->
         <section id="aloqa">
+
             <h2>📞 Biz bilan bog‘laning</h2>
 
             <div class="contact">
 
                 <p>
-                    📱 Telefon:
+                    ❤️
+                    <strong>
+                        Sifatni va halollikni yaxshi ko‘rganlar uchun!
+                    </strong>
+                </p>
+
+
+                <p>
+                    📞 Telefon:
                     <a href="tel:+998958497979">
                         +998 95 849 79 79
                     </a>
                 </p>
 
-                <p>
-                    ✈️ Telegram:
-                    <a
-                        href="https://t.me/arzonbozor_toy_qazi"
-                        target="_blank"
-                    >
-                        @arzonbozor_toy_qazi
-                    </a>
-                </p>
 
                 <p>
-                    📍 Manzil: Do‘kon manzili
-                </p>
-
-                <p>
-                    🕐 Ish vaqti: 08:00 - 22:00
+                    📍 Manzil:
+                    <strong>
+                        Shifobaxsh suvlar. 4
+                    </strong>
                 </p>
 
 
+                <p>
+                    🛒
+                    <strong>
+                        Arzon bozor — ishonchli manzil!
+                    </strong>
+                </p>
+
+
+                <p>
+                    ⏰ Ish vaqti:
+                    <strong>
+                        07:00 - 24:00
+                    </strong>
+                </p>
+
+
+                <!-- BUTTONS -->
                 <div class="contact-buttons">
 
                     <a
@@ -562,6 +728,7 @@
                     >
                         📞 Telefon qilish
                     </a>
+
 
                     <a
                         class="contact-button telegram"
@@ -573,7 +740,20 @@
 
                 </div>
 
+
+                <!-- MAP -->
+                <div class="map">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Shifobaxsh%20suvlar%204%20Tashkent&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
             </div>
+
         </section>
 
     </main>
@@ -581,32 +761,44 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 ARZON BOZOR TOY QAZI</p>
+
+        <p>
+            © 2026 ARZON BOZOR TOY QAZI
+        </p>
+
         <p style="margin-top: 7px;">
             Sifatli mahsulotlar — yaxshi narxlarda
         </p>
+
     </footer>
 
 
     <!-- IMAGE MODAL -->
     <div class="modal" id="imageModal">
 
-        <span class="close" onclick="closeModal()">
+        <span
+            class="close"
+            onclick="closeModal()">
             &times;
         </span>
 
-        <img id="modalImage" src="" alt="Mahsulot rasmi">
+        <img
+            id="modalImage"
+            src=""
+            alt="Mahsulot rasmi"
+        >
 
     </div>
 
 
     <script>
 
-        /* SEARCH */
+        /* QIDIRUV */
         function searchProducts() {
 
             let input =
-                document.getElementById("searchInput")
+                document
+                .getElementById("searchInput")
                 .value
                 .toLowerCase();
 
@@ -619,16 +811,21 @@
                     product.innerText.toLowerCase();
 
                 if (text.includes(input)) {
+
                     product.style.display = "";
+
                 } else {
+
                     product.style.display = "none";
+
                 }
 
             });
+
         }
 
 
-        /* FILTER */
+        /* FILTRLASH */
         function filterProducts(category) {
 
             let products =
@@ -640,9 +837,13 @@
                     category === "all" ||
                     product.dataset.category === category
                 ) {
+
                     product.style.display = "";
+
                 } else {
+
                     product.style.display = "none";
+
                 }
 
             });
@@ -650,35 +851,42 @@
         }
 
 
-        /* OPEN IMAGE */
+        /* RASMNI KATTALASHTIRISH */
         function openModal(imageSrc) {
 
-            document.getElementById("imageModal").style.display = "flex";
+            document
+                .getElementById("imageModal")
+                .style.display = "flex";
 
-            document.getElementById("modalImage").src = imageSrc;
+            document
+                .getElementById("modalImage")
+                .src = imageSrc;
 
         }
 
 
-        /* CLOSE IMAGE */
+        /* RASMNI YOPISH */
         function closeModal() {
 
-            document.getElementById("imageModal").style.display = "none";
+            document
+                .getElementById("imageModal")
+                .style.display = "none";
 
         }
 
 
-        /* CLOSE MODAL WHEN CLICKING OUTSIDE */
-        document.getElementById("imageModal").addEventListener(
-            "click",
-            function(event) {
+        /* MODAL TASHQARISIGA BOSILGANDA YOPISH */
+        document
+            .getElementById("imageModal")
+            .addEventListener("click", function(event) {
 
                 if (event.target === this) {
+
                     closeModal();
+
                 }
 
-            }
-        );
+            });
 
     </script>
 
