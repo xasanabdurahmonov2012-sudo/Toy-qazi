@@ -2,550 +2,1021 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARZON BOZOR | TOY QAZI</title>
+    <title>ARZON BOZOR TOY QAZI</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f5efe5;
-    color:#2b1b12;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* HEADER */
-header{
-    background:linear-gradient(135deg,#35180b,#8b451f,#c8792d);
-    color:white;
-    text-align:center;
-    padding:25px 15px 35px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
 
-.logo{
-    width:150px;
-    height:150px;
-    object-fit:contain;
-    background:white;
-    border-radius:50%;
-    padding:7px;
-    box-shadow:0 6px 25px rgba(0,0,0,.4);
-    margin-bottom:15px;
-}
+        /* ================= HEADER ================= */
 
-header h1{
-    font-size:38px;
-    letter-spacing:3px;
-    margin-bottom:8px;
-}
+        header {
+            background: linear-gradient(135deg, #8b0000, #d40000);
+            color: white;
+            text-align: center;
+            padding: 30px 20px 40px;
+        }
 
-header p{
-    font-size:18px;
-}
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+        }
 
-/* MENU */
-nav{
-    background:#24130b;
-    padding:15px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:100;
-}
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    margin:0 12px;
-}
+        header p {
+            font-size: 18px;
+        }
 
-nav a:hover{
-    color:#ffc46b;
-}
 
-/* HERO */
-.hero{
-    max-width:1100px;
-    margin:30px auto;
-    padding:45px 20px;
-    background:white;
-    border-radius:22px;
-    text-align:center;
-    box-shadow:0 6px 25px rgba(0,0,0,.12);
-}
+        /* ================= NAVBAR ================= */
 
-.horse{
-    font-size:75px;
-    margin-bottom:10px;
-}
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.hero h2{
-    color:#71340f;
-    font-size:30px;
-    margin-bottom:15px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 22px;
+            transition: 0.3s;
+        }
 
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-}
+        nav a:hover {
+            background: #c40000;
+        }
 
-/* SECTION */
-.section{
-    max-width:1100px;
-    margin:45px auto;
-    padding:0 20px;
-}
 
-.section-title{
-    text-align:center;
-    font-size:32px;
-    color:#602d11;
-    margin-bottom:28px;
-}
+        /* ================= MAIN ================= */
 
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
-}
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 25px 15px;
+        }
 
-.product{
-    background:white;
-    border-radius:20px;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.12);
-    transition:.3s;
-    overflow:hidden;
-}
 
-.product:hover{
-    transform:translateY(-7px);
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
-}
+        /* ================= WELCOME ================= */
 
-.product-image{
-    width:100%;
-    height:210px;
-    object-fit:cover;
-    border-radius:15px;
-    background:#eee;
-}
+        .welcome {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
 
-.product h3{
-    color:#632e12;
-    font-size:23px;
-    margin:15px 0 8px;
-}
+        .welcome h2 {
+            color: #a00000;
+            margin-bottom: 10px;
+        }
 
-.product p{
-    color:#666;
-    margin-bottom:12px;
-}
 
-.price{
-    display:block;
-    color:#a6420c;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
+        /* ================= SEARCH ================= */
 
-.order-btn{
-    display:inline-block;
-    background:#9b4717;
-    color:white;
-    text-decoration:none;
-    padding:11px 20px;
-    border-radius:25px;
-    font-weight:bold;
-}
+        .search-box {
+            text-align: center;
+            margin: 25px 0;
+        }
 
-.order-btn:hover{
-    background:#d07028;
-}
+        .search-box input {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+        }
 
-/* INFO */
-.info{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
-}
+        .search-box input:focus {
+            border-color: #c40000;
+        }
 
-.info-card{
-    background:white;
-    text-align:center;
-    padding:30px 20px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.1);
-}
 
-.info-icon{
-    font-size:45px;
-    margin-bottom:15px;
-}
+        /* ================= FILTER ================= */
 
-.info-card h3{
-    color:#642e12;
-    margin-bottom:10px;
-}
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
 
-/* CONTACT */
-.contact{
-    background:linear-gradient(135deg,#35180b,#753614);
-    color:white;
-    text-align:center;
-    padding:45px 20px;
-    margin-top:50px;
-}
+        .filters button {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-.contact h2{
-    font-size:30px;
-    margin-bottom:20px;
-}
+        .filters button:hover {
+            background: #c40000;
+            transform: scale(1.05);
+        }
 
-.contact p{
-    margin:10px;
-    font-size:17px;
-}
 
-.phone{
-    display:inline-block;
-    margin-top:20px;
-    background:#e18b32;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-size:21px;
-    font-weight:bold;
-}
+        /* ================= SECTIONS ================= */
 
-.phone:hover{
-    background:#f2ad58;
-}
+        section {
+            margin-bottom: 50px;
+        }
 
-/* FOOTER */
-footer{
-    background:#1d1009;
-    color:#ddd;
-    text-align:center;
-    padding:22px;
-}
+        section h2 {
+            text-align: center;
+            color: #9b0000;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
 
-/* MOBILE */
-@media(max-width:600px){
 
-    header h1{
-        font-size:28px;
-    }
+        /* ================= PRODUCTS ================= */
 
-    .logo{
-        width:120px;
-        height:120px;
-    }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
 
-    nav a{
-        display:inline-block;
-        margin:5px;
-        font-size:14px;
-    }
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
 
-    .hero{
-        margin:20px 10px;
-        padding:30px 15px;
-    }
+        .product:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
 
-    .hero h2{
-        font-size:23px;
-    }
+        .product img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            cursor: pointer;
+            display: block;
+        }
 
-    .section{
-        padding:0 12px;
-    }
+        .product-info {
+            padding: 18px;
+        }
 
-    .product-image{
-        height:190px;
-    }
-}
-</style>
+        .product-info h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            margin: 7px 0;
+            color: #555;
+        }
+
+        .price {
+            display: block;
+            margin-top: 12px;
+            font-size: 19px;
+            font-weight: bold;
+            color: #008000;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact p {
+            margin: 17px 0;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .contact a {
+            color: #c40000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* ================= CONTACT BUTTONS ================= */
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+            color: white !important;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .phone {
+            background: #008000;
+        }
+
+        .telegram {
+            background: #0088cc;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+
+        /* ================= MAP ================= */
+
+        .map {
+            margin-top: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal img {
+            max-width: 95%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav a {
+                padding: 12px 13px;
+                font-size: 14px;
+            }
+
+            .product img {
+                height: 210px;
+            }
+
+            section h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
 
-    <img src="logo.png"
-         alt="Arzon Bozor Toy Qazi"
-         class="logo">
+    <!-- ================= HEADER ================= -->
 
-    <h1>ARZON BOZOR</h1>
+    <header>
 
-    <p>TOY QAZI — ISHONCHLI MANZIL!</p>
+        <img
+            src="logo.png"
+            alt="ARZON BOZOR TOY QAZI"
+            class="logo"
+        >
 
-</header>
+        <h1>ARZON BOZOR TOY QAZI</h1>
 
+        <p>
+            Sifatli qazi va kalbasalar do‘koni
+        </p>
 
-<!-- MENU -->
-<nav>
-
-    <a href="#bosh">Bosh sahifa</a>
-
-    <a href="#mahsulotlar">Mahsulotlar</a>
-
-    <a href="#biz">Biz haqimizda</a>
-
-    <a href="#aloqa">Aloqa</a>
-
-</nav>
+    </header>
 
 
-<!-- BOSH SAHIFA -->
-<section class="hero" id="bosh">
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="horse">🐎</div>
+    <nav>
 
-    <h2>
-        Sifatni va halollikni yaxshi ko‘radiganlar uchun!
-    </h2>
+        <a href="#home">
+            Bosh sahifa
+        </a>
 
-    <p>
-        Arzon Bozor — sifatli toy qazi, kolbasa,
-        go‘sht mahsulotlari va boshqa mazali
-        mahsulotlarni taklif qiluvchi ishonchli manzil.
-    </p>
+        <a href="#qazi">
+            Qazilar
+        </a>
 
-</section>
+        <a href="#kalbasa">
+            Kalbasalar
+        </a>
 
+        <a href="#aloqa">
+            Aloqa
+        </a>
 
-<!-- MAHSULOTLAR -->
-<section class="section" id="mahsulotlar">
-
-    <h2 class="section-title">
-        🛒 Bizning mahsulotlar
-    </h2>
+    </nav>
 
 
-    <div class="products">
+    <main>
 
 
-        <!-- QAZI -->
-        <div class="product">
+        <!-- ================= HOME ================= -->
 
-            <img
-                class="product-image"
-                src="data:image/svg+xml;utf8,
-                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
-                <rect width='100%25' height='100%25' fill='%23ead2b5'/>
-                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🥩</text>
-                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>QAZI</text>
-                </svg>"
-                alt="Qazi">
+        <div class="welcome" id="home">
 
-            <h3>Qazi</h3>
+            <h2>
+                Do‘konimizga xush kelibsiz!
+            </h2>
 
             <p>
-                Yangi va sifatli toy qazi
+                ❤️ Sifatni va halollikni yaxshi ko‘rganlar uchun!
             </p>
 
-            <span class="price">
-                Narxi: Kelishiladi
-            </span>
-
-            <a class="order-btn" href="tel:958497979">
-                Buyurtma berish
-            </a>
+            <p style="margin-top: 10px;">
+                ARZON BOZOR — ishonchli manzil!
+            </p>
 
         </div>
 
 
-        <!-- KOLBASA -->
-        <div class="product">
+        <!-- ================= SEARCH ================= -->
 
-            <img
-                class="product-image"
-                src="data:image/svg+xml;utf8,
-                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
-                <rect width='100%25' height='100%25' fill='%23efd0c0'/>
-                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🌭</text>
-                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>KOLBASA</text>
-                </svg>"
-                alt="Kolbasa">
+        <div class="search-box">
 
-            <h3>Kolbasa</h3>
-
-            <p>
-                Turli xil mazali kolbasalar
-            </p>
-
-            <span class="price">
-                Narxi: Kelishiladi
-            </span>
-
-            <a class="order-btn" href="tel:958497979">
-                Buyurtma berish
-            </a>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Mahsulot qidirish..."
+                onkeyup="searchProducts()"
+            >
 
         </div>
 
 
-        <!-- GO'SHT -->
-        <div class="product">
+        <!-- ================= FILTER ================= -->
 
-            <img
-                class="product-image"
-                src="data:image/svg+xml;utf8,
-                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
-                <rect width='100%25' height='100%25' fill='%23e8c5b5'/>
-                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🥩</text>
-                <text x='50%25' y='75%25' text-anchor='middle' font-size='38' font-family='Arial' fill='%23632e12'>GO‘SHT</text>
-                </svg>"
-                alt="Go'sht">
+        <div class="filters">
 
-            <h3>Go‘sht</h3>
+            <button onclick="filterProducts('all')">
+                Barchasi
+            </button>
 
-            <p>
-                Sifatli va yangi go‘sht mahsulotlari
-            </p>
+            <button onclick="filterProducts('qazi')">
+                Qazi
+            </button>
 
-            <span class="price">
-                Narxi: Kelishiladi
-            </span>
-
-            <a class="order-btn" href="tel:958497979">
-                Buyurtma berish
-            </a>
+            <button onclick="filterProducts('kalbasa')">
+                Kalbasa
+            </button>
 
         </div>
 
 
-        <!-- BOSHQA -->
-        <div class="product">
+        <!-- ================= QAZI ================= -->
 
-            <img
-                class="product-image"
-                src="data:image/svg+xml;utf8,
-                <svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'>
-                <rect width='100%25' height='100%25' fill='%23eadfc9'/>
-                <text x='50%25' y='45%25' text-anchor='middle' font-size='90'>🛍️</text>
-                <text x='50%25' y='75%25' text-anchor='middle' font-size='34' font-family='Arial' fill='%23632e12'>MAHSULOTLAR</text>
-                </svg>"
-                alt="Boshqa mahsulotlar">
+        <section id="qazi">
 
-            <h3>Boshqa mahsulotlar</h3>
+            <h2>
+                🥩 Qazilar
+            </h2>
 
-            <p>
-                Do‘konimizdagi boshqa mahsulotlar
-            </p>
+            <div class="products">
 
-            <span class="price">
-                Narxi: Kelishiladi
-            </span>
 
-            <a class="order-btn" href="tel:958497979">
-                Buyurtma berish
-            </a>
+                <!-- QAZI 1 -->
 
-        </div>
+                <div class="product" data-category="qazi">
+
+                    <img
+                        src="qazi1.jpg.webp"
+                        alt="Maxsus Qazi"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Maxsus Qazi
+                        </h3>
+
+                        <p>
+                            Turi: Maxsus qazi
+                        </p>
+
+                        <span class="price">
+                            150 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QAZI 2 -->
+
+                <div class="product" data-category="qazi">
+
+                    <img
+                        src="qazi2.jpg.webp"
+                        alt="To‘y Qazisi"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            To‘y Qazisi
+                        </h3>
+
+                        <p>
+                            Turi: To‘y uchun qazi
+                        </p>
+
+                        <span class="price">
+                            180 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QAZI 3 -->
+
+                <div class="product" data-category="qazi">
+
+                    <img
+                        src="qazi3.jpg.webp"
+                        alt="Saralangan Qazi"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Saralangan Qazi
+                        </h3>
+
+                        <p>
+                            Turi: Saralangan
+                        </p>
+
+                        <span class="price">
+                            170 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QAZI 4 -->
+
+                <div class="product" data-category="qazi">
+
+                    <img
+                        src="qazi4.jpg.webp"
+                        alt="Uy Qazisi"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Uy Qazisi
+                        </h3>
+
+                        <p>
+                            Turi: Uy sharoitida tayyorlangan
+                        </p>
+
+                        <span class="price">
+                            160 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QAZI 5 -->
+
+                <div class="product" data-category="qazi">
+
+                    <img
+                        src="qazi5.jpg.webp"
+                        alt="Sifatli Qazi"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Sifatli Qazi
+                        </h3>
+
+                        <p>
+                            Turi: Saralangan go‘shtli qazi
+                        </p>
+
+                        <span class="price">
+                            175 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KALBASA ================= -->
+
+        <section id="kalbasa">
+
+            <h2>
+                🌭 Kalbasalar
+            </h2>
+
+            <div class="products">
+
+
+                <!-- KALBASA 1 -->
+
+                <div class="product" data-category="kalbasa">
+
+                    <img
+                        src="kalbasa1.jpg.webp"
+                        alt="Dudlangan Kalbasa"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Dudlangan Kalbasa
+                        </h3>
+
+                        <p>
+                            Turi: Dudlangan
+                        </p>
+
+                        <span class="price">
+                            85 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KALBASA 2 -->
+
+                <div class="product" data-category="kalbasa">
+
+                    <img
+                        src="kalbasa2.jpg.webp"
+                        alt="Maxsus Kalbasa"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Maxsus Kalbasa
+                        </h3>
+
+                        <p>
+                            Turi: Maxsus
+                        </p>
+
+                        <span class="price">
+                            95 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KALBASA 3 -->
+
+                <div class="product" data-category="kalbasa">
+
+                    <img
+                        src="kalbasa3.jpg.webp"
+                        alt="Qaynatilgan Kalbasa"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Qaynatilgan Kalbasa
+                        </h3>
+
+                        <p>
+                            Turi: Qaynatilgan
+                        </p>
+
+                        <span class="price">
+                            75 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KALBASA 4 -->
+
+                <div class="product" data-category="kalbasa">
+
+                    <img
+                        src="kalbasa4.jpg.jpg"
+                        alt="Servelat Kalbasa"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Servelat Kalbasa
+                        </h3>
+
+                        <p>
+                            Turi: Servelat
+                        </p>
+
+                        <span class="price">
+                            100 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KALBASA 5 -->
+
+                <div class="product" data-category="kalbasa">
+
+                    <img
+                        src="kalbasa5.jpg.webp"
+                        alt="Doktorskaya Kalbasa"
+                        onclick="openModal(this.src)"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>
+                            Doktorskaya Kalbasa
+                        </h3>
+
+                        <p>
+                            Turi: Qaynatilgan
+                        </p>
+
+                        <span class="price">
+                            90 000 so‘m / kg
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ALOQA ================= -->
+
+        <section id="aloqa">
+
+            <h2>
+                📞 Biz bilan bog‘laning
+            </h2>
+
+            <div class="contact">
+
+                <p>
+                    ❤️
+                    <strong>
+                        Sifatni va halollikni yaxshi ko‘rganlar uchun!
+                    </strong>
+                </p>
+
+
+                <p>
+                    📞 Telefon:
+                    <a href="tel:+998958497979">
+                        +998 95 849 79 79
+                    </a>
+                </p>
+
+
+                <p>
+                    📍 Manzil:
+                    <strong>
+                        Shifobaxsh suvlar. 4
+                    </strong>
+                </p>
+
+
+                <p>
+                    🛒
+                    <strong>
+                        Arzon bozor — ishonchli manzil!
+                    </strong>
+                </p>
+
+
+                <p>
+                    ⏰ Ish vaqti:
+                    <strong>
+                        07:00 - 24:00
+                    </strong>
+                </p>
+
+
+                <!-- CONTACT BUTTONS -->
+
+                <div class="contact-buttons">
+
+                    <a
+                        class="contact-button phone"
+                        href="tel:+998958497979"
+                    >
+                        📞 Telefon qilish
+                    </a>
+
+
+                    <a
+                        class="contact-button telegram"
+                        href="https://t.me/arzonbozor_toy_qazi"
+                        target="_blank"
+                    >
+                        ✈️ Telegram
+                    </a>
+
+                </div>
+
+
+                <!-- MAP -->
+
+                <div class="map">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Shifobaxsh%20suvlar%204%20Tashkent&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 ARZON BOZOR TOY QAZI
+        </p>
+
+        <p style="margin-top: 7px;">
+            Sifatli mahsulotlar — yaxshi narxlarda
+        </p>
+
+    </footer>
+
+
+    <!-- ================= IMAGE MODAL ================= -->
+
+    <div class="modal" id="imageModal">
+
+        <span
+            class="close"
+            onclick="closeModal()">
+            &times;
+        </span>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Mahsulot rasmi"
+        >
 
     </div>
 
-</section>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* QIDIRUV */
+
+        function searchProducts() {
+
+            let input =
+                document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let products =
+                document.querySelectorAll(".product");
+
+            products.forEach(function(product) {
+
+                let text =
+                    product.innerText.toLowerCase();
+
+                if (text.includes(input)) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        }
 
 
-<!-- BIZ HAQIMIZDA -->
-<section class="section" id="biz">
+        /* FILTRLASH */
 
-    <h2 class="section-title">
-        ⭐ Biz haqimizda
-    </h2>
+        function filterProducts(category) {
 
+            let products =
+                document.querySelectorAll(".product");
 
-    <div class="info">
+            products.forEach(function(product) {
 
-        <div class="info-card">
+                if (
+                    category === "all" ||
+                    product.dataset.category === category
+                ) {
 
-            <div class="info-icon">✅</div>
+                    product.style.display = "";
 
-            <h3>Sifat</h3>
+                } else {
 
-            <p>
-                Sifatli mahsulotlarga e’tibor beramiz.
-            </p>
+                    product.style.display = "none";
 
-        </div>
+                }
 
+            });
 
-        <div class="info-card">
-
-            <div class="info-icon">🤝</div>
-
-            <h3>Ishonch</h3>
-
-            <p>
-                Mijozlarimizga halol va ishonchli xizmat.
-            </p>
-
-        </div>
+        }
 
 
-        <div class="info-card">
+        /* RASMNI KATTALASHTIRISH */
 
-            <div class="info-icon">🏪</div>
+        function openModal(imageSrc) {
 
-            <h3>Do‘kon</h3>
+            document
+                .getElementById("imageModal")
+                .style.display = "flex";
 
-            <p>
-                Kerakli mahsulotlarni bir joydan topishingiz mumkin.
-            </p>
+            document
+                .getElementById("modalImage")
+                .src = imageSrc;
 
-        </div>
-
-    </div>
-
-</section>
+        }
 
 
-<!-- ALOQA -->
-<section class="contact" id="aloqa">
+        /* RASMNI YOPISH */
 
-    <h2>📞 Biz bilan bog‘laning</h2>
+        function closeModal() {
 
-    <p>
-        Arzon Bozor — ishonchli manzil!
-    </p>
+            document
+                .getElementById("imageModal")
+                .style.display = "none";
 
-    <p>
-        📍 Manzil: Shifobaxsh suvlar, 4
-    </p>
-
-    <p>
-        ⏰ Ish vaqti: Har kuni
-    </p>
-
-    <a class="phone" href="tel:958497979">
-        📞 95-849-79-79
-    </a>
-
-</section>
+        }
 
 
-<!-- FOOTER -->
-<footer>
+        /* MODAL TASHQARISIGA BOSILGANDA YOPISH */
 
-    © 2026 ARZON BOZOR — TOY QAZI
+        document
+            .getElementById("imageModal")
+            .addEventListener("click", function(event) {
 
-</footer>
+                if (event.target === this) {
+
+                    closeModal();
+
+                }
+
+            });
+
+    </script>
 
 </body>
 </html>
