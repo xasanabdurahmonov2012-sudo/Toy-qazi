@@ -1,1 +1,116 @@
 
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARZON BOZOR TOY QAZI</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, #291010, #080808 65%, #000);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome {
+    max-width: 800px;
+    width: 100%;
+}
+
+.logo {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #ed1428;
+    box-shadow: 0 0 35px #b00000;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(30px, 6vw, 55px);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff172d;
+    font-size: clamp(35px, 7vw, 65px);
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ddd;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.enter {
+    display: inline-block;
+    background: linear-gradient(#f20b20, #a00000);
+    border: 2px solid #ff2538;
+    border-radius: 16px;
+    padding: 18px 42px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 0 0 25px #b00000;
+    transition: 0.3s;
+}
+
+.enter:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 40px red;
+}
+
+.footer {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+@media (max-width: 500px) {
+    .logo {
+        width: 165px;
+        height: 165px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="welcome">
+
+    <img src="rasmlar/logo.png" alt="Toy Qazi logotipi" class="logo">
+
+    <h1>ARZON BOZOR</h1>
+    <h2>TOY QAZI</h2>
+
+    <p>Sifatli qazi va kalbasalar do‘koni</p>
+
+    <a href="index.html" class="enter">
+        ➜ Saytga kirish
+    </a>
+
+    <div class="footer">
+        Sifat kafolati · Sifatli mahsulot · Ishonchli do‘kon
+    </div>
+
+</div>
+</body>
+</html>
